@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="SwiftMap is a minimal visual mind map editor for VS Code, backed by a plain-text .swiftmap format."
+  />
+  <meta name="theme-color" content="#eaf9f7" />
+  <meta property="og:title" content="SwiftMap" />
+  <meta
+    property="og:description"
+    content="Minimal visual mind mapping for VS Code, with automatic layout and plain-text storage."
+  />
+  <meta property="og:type" content="website" />
+  <title>SwiftMap</title>
+  <link rel="icon" href="./assets/logo.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="backdrop backdrop-one" aria-hidden="true"></div>
+  <div class="backdrop backdrop-two" aria-hidden="true"></div>
+
+  <div class="page">
+    <header class="brand">
+      <a class="brand-link" href="#" aria-label="SwiftMap home">
+        <img src="./assets/logo.png" alt="" class="brand-logo" />
+        <span class="brand-name">SwiftMap</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">VS Code extension</p>
+          <h1>
+            <span class="h1-line highlight">Mind maps</span>
+            <span class="h1-line">visual editor in</span>
+            <span class="h1-line highlight">VS Code</span>
+          </h1>
+          <p class="lede">
+            SwiftMap turns tree-structured notes into a fast visual editor with automatic layout,
+            inline editing, flags, collapse and reorder controls, and PNG export. The source stays
+            in a compact <code>.swiftmap</code> file.
+          </p>
+          <p class="install-note">
+            <span class="install-label">Install</span>
+            Install from the
+            <a href="https://marketplace.visualstudio.com/items?itemName=rafalchojnacki.swiftmap" target="_blank" rel="noreferrer">VS Code Marketplace</a>
+            or run
+            <code>code --install-extension rafalchojnacki.swiftmap</code>
+            , then open any <code>.swiftmap</code> file to start editing.
+          </p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 720 620" role="presentation">
+            <defs>
+              <linearGradient id="nodeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#56d2dc" />
+                <stop offset="100%" stop-color="#1ea1ad" />
+              </linearGradient>
+            </defs>
+            <path class="art-line" stroke="url(#nodeGlow)" d="M210 320H300C336 320 360 296 360 260V160C360 124 388 96 424 96H525" />
+            <path class="art-line" stroke="url(#nodeGlow)" d="M210 320H300C336 320 360 344 360 380V480C360 516 388 544 424 544H525" />
+            <path class="art-line" stroke="url(#nodeGlow)" d="M210 320H300C336 320 360 300 360 280V232C360 208 382 188 406 188H500" />
+            <path class="art-line" stroke="url(#nodeGlow)" d="M525 96H565" />
+            <path class="art-line" stroke="url(#nodeGlow)" d="M500 188H565" />
+            <path class="art-line" stroke="url(#nodeGlow)" d="M525 544H565" />
+            <circle class="art-node art-node-root" cx="192" cy="320" r="74" />
+            <circle class="art-node art-node-core" cx="192" cy="320" r="40" />
+            <circle class="art-node" cx="540" cy="96" r="42" />
+            <circle class="art-node" cx="540" cy="188" r="42" />
+            <circle class="art-node art-node-accent" cx="540" cy="544" r="42" />
+
+            <g class="art-card" transform="translate(570 68)">
+              <rect rx="16" ry="16" width="132" height="52" />
+              <text x="18" y="32">Meeting Notes</text>
+            </g>
+            <g class="art-card" transform="translate(500 160)">
+              <rect rx="16" ry="16" width="204" height="52" />
+              <text x="18" y="32">Personal Development</text>
+            </g>
+            <g class="art-card art-card-muted" transform="translate(570 500)">
+              <rect rx="16" ry="16" width="140" height="52" />
+              <text x="18" y="32">Project Ideas</text>
+            </g>
+
+            <g class="art-mini" transform="translate(548 260)">
+              <rect rx="10" ry="10" width="92" height="28" />
+              <rect rx="10" ry="10" y="38" width="120" height="28" />
+              <rect rx="10" ry="10" y="76" width="84" height="28" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="feature-grid" aria-label="Core capabilities">
+        <article class="feature-card">
+          <p class="feature-kicker">Format</p>
+          <h2>Plain text, one tree</h2>
+          <p>
+            Each mind map lives in a single UTF-8 text file with indentation-based structure,
+            expandable nodes, and ordered flags.
+          </p>
+        </article>
+        <article class="feature-card">
+          <p class="feature-kicker">Editing</p>
+          <h2>Keyboard-first flow</h2>
+          <p>
+            Add children and siblings, edit inline, reorder nodes, and move selected branches
+            without leaving the editor.
+          </p>
+        </article>
+        <article class="feature-card">
+          <p class="feature-kicker">Output</p>
+          <h2>Export a snapshot</h2>
+          <p>
+            Preserve the current collapsed state or expand the full map before exporting to PNG.
+          </p>
+        </article>
+      </section>
+
+      <section class="feature-grid" aria-label="Trust and value">
+        <article class="feature-card">
+          <p class="feature-kicker">Privacy</p>
+          <h2>Your files stay private</h2>
+          <p>
+            Your maps stay in local <code>.swiftmap</code> files, so you can work offline without
+            sending content to a cloud service.
+          </p>
+        </article>
+        <article class="feature-card">
+          <p class="feature-kicker">Licensing</p>
+          <h2>Free for private and commercial use</h2>
+          <p>
+            Use SwiftMap for personal notes or paid work without a usage gate, seat limit, or
+            license wall.
+          </p>
+        </article>
+        <article class="feature-card">
+          <p class="feature-kicker">Open source</p>
+          <h2>Open source project</h2>
+          <p>
+            Inspect the implementation, understand the format, and adapt the extension to your
+            own workflow.
+          </p>
+        </article>
+      </section>
+
+      <section class="examples" id="examples">
+        <div class="section-head">
+          <p class="eyebrow">Examples</p>
+          <h2>Meeting notes, tasks, ideas, roadmaps, and more</h2>
+        </div>
+
+        <div class="example-grid">
+          <article class="example-card">
+            <a class="example-image" href="./examples/project-planning.swiftmap">
+              <img
+                src="./assets/project-planning.png"
+                alt="Project planning mind map example"
+                loading="lazy"
+              />
+            </a>
+            <div class="example-body">
+              <div class="example-meta">
+                <span class="chip">Project planning</span>
+                <span class="chip">Done</span>
+                <span class="chip">Question</span>
+                <span class="chip">Task</span>
+              </div>
+              <h3>Release planning and coordination</h3>
+              <p>
+                A compact tree for scope, discovery, delivery, and risk review. Good for meeting
+                notes that need to stay structured.
+              </p>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <a class="example-image" href="./examples/personal-roadmap.swiftmap">
+              <img
+                src="./assets/personal-roadmap.png"
+                alt="Personal roadmap mind map example"
+                loading="lazy"
+              />
+            </a>
+            <div class="example-body">
+              <div class="example-meta">
+                <span class="chip">Personal roadmap</span>
+                <span class="chip">High priority</span>
+                <span class="chip">Idea</span>
+                <span class="chip">Task</span>
+              </div>
+              <h3>Goals, learning, and next steps</h3>
+              <p>
+                A longer-lived map that mixes priorities, ideas, and concrete tasks without losing
+                the tree structure.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          SwiftMap is a Visual Studio Code extension for tree-shaped mind maps stored in plain
+          text.
+        </p>
+        <a href="https://github.com/rafalchojnacki/swiftmap" target="_blank" rel="noreferrer">
+          Source on GitHub
+        </a>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
